@@ -18,7 +18,7 @@ header {
   border-radius: 8px;
   background: #ff900e;
   padding: 20px 25px;
-  color: #FFF;
+  color: #fff;
   font-size: 1.25rem;
   cursor: pointer;
   border: 0;
@@ -61,68 +61,101 @@ nav li a {
   color: #131313;
 }
 .banner-description {
-    margin-top: -20px;
+  margin-top: -20px;
   color: #727272;
 }
-.banner-img{
-    margin-top: 20px;
-    width: 100%;
+.banner-img {
+  margin-top: 20px;
+  width: 100%;
+}
+
+/* main style  */
+
+main {
+  max-width: 1440px;
+  margin: 70px auto;
+}
+/*  team feature style */
+.team-container {
+  display: flex;
+  align-items: center;
+}
+.team-image {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+.team-content {
+  padding-left: 70px;
+  padding-right: 70px;
+}
+
+.team-title {
+  font-size: 2.8rem;
+}
+.team-title .Quick-list {
+  color: #727272;
+  font-weight: 500;
+}
+.team-title .of-Our {
+  color: #131313;
+}
+.team-title .text-features {
+  color: #ff900e;
+  font-weight: 700;
 }
 
 /* respomsive media queries */
 /* for mobile devices */
 @media screen and (max-width: 576px) {
-    header {
-        padding: 20px;
-    }
-    nav {
-        flex-direction: column;
-    }
+  header {
+    padding: 20px;
+  }
+  nav,
+  .team-container {
+    flex-direction: column;
+  }
+  .team-image {
+    grid-template-columns: 1fr;
+  }
+  .team-content {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+/* fact container */
+.fact-card-container{
+  display: flex;
+  justify-content: space-around;
+}
+
+.fact-card-container .card {
+  border-radius: 8px;
+  border: 1px solid #ff900e;
+  text-align: center;
+  padding: 30px;
+}
+.fact-card-container .card-stats{
+  font-size: 2.8rem;
+  color: #424242;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.fact-card-container .card-title{
+  font-weight: 600;
+  color: #727272;
+  font-size: 1.25rem;
+  margin-top: 5px;
 }
 
 /* for tablet or medium devices */
- 
-@media screen and (min-width: 567px) and (max-width: 960px){
-    header{
-        padding: 50px;
-    }
-    nav {
-        flex-direction: column;
-    }
-}
 
-/* main style  */
-
-main{
-    max-width: 1440px;
-    margin: 0 auto;
-}
-/*  team feature style */
-.team-container{
-    display: flex;
-    align-items: center;
-}
-.team-image{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
-}
-.team-content{
-    padding-left: 70px;
-    padding-right: 70px;
-}
-
-.team-title{
-    font-size: 2.8rem;
-}
-.team-title .Quick-list{
-    color: #727272;
-    font-weight: 500;
-}
-.team-title .of-Our{
-    color: #131313;
-}
-.team-title .text-features{
-    color: #FF900E;
-    font-weight: 700;
+@media screen and (min-width: 567px) and (max-width: 960px) {
+  header {
+    padding: 50px;
+  }
+  nav,
+  .team-container {
+    flex-direction: column;
+  }
 }
